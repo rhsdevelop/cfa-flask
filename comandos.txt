@@ -1,0 +1,18 @@
+python main.py runserver    # Ativa o servidor
+python main.py db init      # Cria um novo arquivo e pasta migrations
+python main.py db migrate   # Migrações
+python main.py db upgrade   # Migrações
+
+
+https://getbootstrap.com.br/ para buscar templates com temas referência.
+
+
+CRUD (banco de dados)
+
+Exemplo criar dados
+
+from cfa.models.tables import User
+from cfa import db
+i = User('renan', '1234', 'Renan Souza', 'renanhs.80@gmail.com', '16981579135')
+db.session.add(i)
+db.session.commit()
