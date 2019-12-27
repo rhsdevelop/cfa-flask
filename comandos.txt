@@ -1,5 +1,6 @@
 python main.py runserver    # Ativa o servidor
 python main.py db init      # Cria um novo arquivo e pasta migrations
+python manage.py db revision # Para postgres
 python main.py db migrate   # Migrações
 python main.py db upgrade   # Migrações
 
@@ -16,3 +17,6 @@ from cfa import db
 i = User('renan', '1234', 'Renan Souza', 'renanhs.80@gmail.com', '16981579135')
 db.session.add(i)
 db.session.commit()
+
+heroku logs -a rhs-cfa --tail
+heroku run bash -a rhs-cfa

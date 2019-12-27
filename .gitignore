@@ -132,3 +132,5 @@ dmypy.json
 .vscode/
 migrations/
 cfa.db
+config.heroku
+config.local
